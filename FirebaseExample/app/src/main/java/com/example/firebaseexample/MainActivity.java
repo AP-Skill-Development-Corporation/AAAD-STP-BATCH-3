@@ -46,6 +46,8 @@ public class MainActivity extends AppCompatActivity {
                         public void onComplete(@NonNull Task<AuthResult> task) {
                             if (task.isSuccessful()){
                                 Log.i("Apssdc","Login Successful");
+                                startActivity(new Intent(MainActivity.this,HomeActivity.class));
+                                finish();
                             }else{
                                 Log.i("Apssdc","Login Failed");
                             }
