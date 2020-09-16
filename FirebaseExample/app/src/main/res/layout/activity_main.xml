@@ -31,6 +31,15 @@
         android:id="@+id/pass"
         android:layout_marginTop="15dp"
         android:inputType="textPassword"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Forgot Password ?"
+        android:textSize="21sp"
+        android:textStyle="italic|bold"
+        android:layout_marginTop="15dp"
+        android:gravity="end"
+        android:onClick="reset"/>
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
