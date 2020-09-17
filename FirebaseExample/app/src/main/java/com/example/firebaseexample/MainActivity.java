@@ -100,4 +100,9 @@ public class MainActivity extends AppCompatActivity {
         });
         builder.show();
     }
+
+    public void pauth(View view) {
+        startActivity(new Intent(this,PhoneAuth.class));
+        finish();
+    }
 }

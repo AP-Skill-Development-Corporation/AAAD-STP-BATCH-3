@@ -52,6 +52,12 @@
         android:text="register"
         android:onClick="register"
         android:layout_marginTop="15dp"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="phone auth"
+        android:onClick="pauth"
+        android:layout_marginTop="15dp"/>
 
 
 </LinearLayout>
