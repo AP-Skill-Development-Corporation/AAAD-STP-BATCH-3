@@ -2,6 +2,7 @@ package com.example.firebasedatabase;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.Manifest;
@@ -16,10 +17,13 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import java.util.ArrayList;
+
 public class MainActivity extends AppCompatActivity {
     EditText name,roll,number;
     RecyclerView rv;
     DatabaseReference reference;
+    ArrayList<MyModel> list;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,15 +32,20 @@ public class MainActivity extends AppCompatActivity {
         roll = findViewById(R.id.roll);
         number = findViewById(R.id.number);
         rv = findViewById(R.id.rv);
+        list = new ArrayList<>();
         reference = FirebaseDatabase.getInstance().getReference("Data");
         //To read the data from the firebase database
         reference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
+                list.clear();
                 for (DataSnapshot dataSnapshot:snapshot.getChildren()){
                     MyModel model = dataSnapshot.getValue(MyModel.class);
-                    
+                    list.add(model);
                 }
+                MyAdapter adapter = new MyAdapter(MainActivity.this,list);
+                rv.setAdapter(adapter);
+                rv.setLayoutManager(new LinearLayoutManager(MainActivity.this));
             }
 
             @Override
