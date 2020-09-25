@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+   <TextView
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:text="Payment GateWay App"
+       android:textSize="25sp"
+       android:gravity="center"
+       android:textColor="#673AB7"/>
+    <EditText
+        android:drawableLeft="@drawable/cname"
+        android:id="@+id/cname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Customer Name"
+        android:textColorHint="#3F51B5"/>
+    <EditText
+        android:id="@+id/cprice"
+        android:inputType="numberPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Price Here"
+        android:textColorHint="#3F51B5"/>
+    <Button
+        android:id="@+id/b1"
+        android:background="#D1A6D8"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="25sp"
+        android:textColor="@color/colorPrimary"
+        android:text="pay"/>
+
+</LinearLayout>
