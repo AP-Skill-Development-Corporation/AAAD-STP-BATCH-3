@@ -26,3 +26,5 @@
 [Day 10](https://transcripts.gotomeeting.com/#/s/c0ef57af6745b0d98acc474ce975341166f7812a938bd951fe654b9462bd0b5c)
 
 [Day 11](https://transcripts.gotomeeting.com/#/s/88d3a5e21906a4463aaed7faefa27392171394bee0ba62e788bfa3db2cc0de59)
+
+[Day 12](https://transcripts.gotomeeting.com/#/s/89e7a1f8a9114bec055aefae9c4d8493e81ff63708e9590508dc0449c3a04941)
